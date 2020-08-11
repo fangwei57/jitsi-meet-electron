@@ -1,0 +1,39 @@
+{
+	"enterConferenceNameOrUrl": "输入一个会议名称以开启或参加会议",
+	"go": "进入",
+	"help": "帮助",
+	"termsLink": "Terms",
+	"privacyLink": "Privacy",
+	"sendFeedbackLink": "反馈",
+	"aboutLink": "关于",
+	"helpLink": "帮助",
+	"versionLabel": "Version: {{version}}",
+	"onboarding": {
+		"startTour": "开始您的旅程",
+		"skip": "跳过",
+		"welcome": "欢迎使用{{appName}}",
+		"letUsShowYouAround": "让我带你四处看看!",
+		"next": "下一步",
+		"conferenceUrl": "输入要加入的房间的名称(或完整URL)。你可以起一个名字，只是让其他人知道就可以通过名字进入会议。",
+		"settingsDrawerButton": "点击这里打开设置。",
+		"nameSetting": "设置您的显示名称，其他人将看到您使用此名称。",
+		"emailSetting": "邮箱设置",
+		"startMutedToggles": "在进入会议时你的音频或视频在这里设置静音。这将适用于所有会议。",
+		"serverSetting": "服务器设置",
+		"serverTimeout": "超时设置",
+		"alwaysOnTop": "始终显示在最前面"
+	},
+	"settings": {
+		"back": "返回",
+		"name": "姓名",
+		"email": "邮箱",
+		"advancedSettings": "更多设置",
+		"alwaysOnTopWindow": "窗口总是在最前",
+		"startWithAudioMuted": "进入会议时关闭声音",
+		"startWithVideoMuted": "进入会议时关闭视频",
+		"invalidServer": "无效的服务器URL或外部API不可用",
+		"invalidServerTimeout": "服务器超时无效",
+		"serverUrl": "服务器地址",
+		"serverTimeout": "服务器超时时间 (s)"
+	}
+}
