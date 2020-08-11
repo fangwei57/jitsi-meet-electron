@@ -3,17 +3,16 @@ export default {
     /**
      * The URL with extra information about the app / service.
      */
-    aboutURL: 'https://jitsi.org/what-is-jitsi/',
+    aboutURL: 'https://www.deepblueai.com/',
 
     /**
-     * The URL to the source code repository.
+     * The URL for help .
      */
-    sourceURL: 'https://github.com/jitsi/jitsi-meet-electron',
-
+    helpURL: 'https://www.deepblueai.com/',
     /**
      * Application name.
      */
-    appName: 'Jitsi Meet',
+    appName: 'DeepBlue Meet',
 
     /**
     * The prefix for application protocol.
@@ -24,7 +23,7 @@ export default {
     /**
      * The default server URL of Jitsi Meet Deployment that will be used.
      */
-    defaultServerURL: 'https://meet.jit.si',
+    defaultServerURL: 'https://192.168.40.125:8443',
 
     /**
      * The default server Timeout in seconds.
@@ -34,15 +33,7 @@ export default {
     /**
      * URL to send feedback.
      */
-    feedbackURL: 'mailto:support@jitsi.org',
+    feedbackURL: 'infra@deebblueai.com',
 
-    /**
-     * The URL of Privacy Policy Page.
-     */
-    privacyPolicyURL: 'https://jitsi.org/meet/privacy',
 
-    /**
-     * The URL of Terms and Conditions Page.
-     */
-    termsAndConditionsURL: 'https://jitsi.org/meet/terms'
 };

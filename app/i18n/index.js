@@ -9,6 +9,7 @@ const languages = {
     fr: { translation: require('./lang/fr.json') },
     hu: { translation: require('./lang/hu.json') },
     it: { translation: require('./lang/it.json') },
+    zh_cn: { translation: require('./lang/zh_cn.json') },
     ru: { translation: require('./lang/ru.json') }
 };
 
@@ -19,7 +20,7 @@ i18n
     .init({
         resources: languages,
         lng: detectedLocale,
-        fallbackLng: 'en',
+        fallbackLng: 'zh_cn',
         interpolation: {
             escapeValue: false // not needed for react as it escapes by default
         }

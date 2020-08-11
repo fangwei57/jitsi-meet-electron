@@ -29,7 +29,7 @@ const DEFAULT_STATE = {
     serverURL: undefined,
     serverTimeout: undefined,
     startWithAudioMuted: false,
-    startWithVideoMuted: false
+    startWithVideoMuted: true
 };
 
 /**

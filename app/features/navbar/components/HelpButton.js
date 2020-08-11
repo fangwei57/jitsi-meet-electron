@@ -35,7 +35,7 @@ class HelpButton extends Component<*, State> {
         };
 
         this._onAboutClick = openExternalLink.bind(undefined, config.aboutURL);
-        this._onSourceClick = openExternalLink.bind(undefined, config.sourceURL);
+        this._onHelpClick = openExternalLink.bind(undefined, config.helpURL);
         this._onIconClick = this._onIconClick.bind(this);
         this._onOpenChange = this._onOpenChange.bind(this);
         this._onPrivacyClick
@@ -48,7 +48,7 @@ class HelpButton extends Component<*, State> {
 
     _onAboutClick: (*) => void;
 
-    _onSourceClick: (*) => void;
+    _onHelpClick: (*) => void;
 
     _onIconClick: (*) => void;
 
@@ -98,20 +98,14 @@ class HelpButton extends Component<*, State> {
                 position = 'right bottom'
                 trigger = { <HelpIcon /> }>
                 <Group heading = { t('help') } >
-                    <Item onActivate = { this._onTermsClick }>
-                        { t('termsLink') }
-                    </Item>
-                    <Item onActivate = { this._onPrivacyClick }>
-                        { t('privacyLink') }
-                    </Item>
                     <Item onActivate = { this._onSendFeedbackClick }>
                         { t('sendFeedbackLink') }
                     </Item>
+                    <Item onActivate = { this._onHelpClick }>
+                        { t('helpLink') }
+                    </Item>
                     <Item onActivate = { this._onAboutClick }>
                         { t('aboutLink') }
-                    </Item>
-                    <Item onActivate = { this._onSourceClick }>
-                        { t('sourceLink') }
                     </Item>
                     <Item>
                         { t('versionLabel', { version }) }
