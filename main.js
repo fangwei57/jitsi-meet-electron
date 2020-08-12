@@ -9,7 +9,7 @@ const {
 const contextMenu = require('electron-context-menu');
 const debug = require('electron-debug');
 const isDev = require('electron-is-dev');
-const { autoUpdater } = require('electron-updater');
+const {autoUpdater} = require('electron-updater');
 const windowStateKeeper = require('electron-window-state');
 const {
     initPopupsConfigurationMain,
@@ -21,7 +21,7 @@ const {
 const path = require('path');
 const URL = require('url');
 const config = require('./app/features/config');
-const { openExternalLink } = require('./app/features/utils/openExternalLink');
+const {openExternalLink} = require('./app/features/utils/openExternalLink');
 
 const showDevTools = Boolean(process.env.SHOW_DEV_TOOLS) || (process.argv.indexOf('--show-dev-tools') > -1);
 
@@ -86,63 +86,63 @@ let protocolDataForFrontApp = null;
  */
 function setApplicationMenu() {
     if (process.platform === 'darwin') {
-        const template = [ {
+        const template = [{
             label: app.name,
             submenu: [
                 {
                     role: 'services',
                     submenu: []
                 },
-                { type: 'separator' },
-                { role: 'hide' },
-                { role: 'hideothers' },
-                { role: 'unhide' },
-                { type: 'separator' },
-                { role: 'quit' }
+                {type: 'separator'},
+                {role: 'hide'},
+                {role: 'hideothers'},
+                {role: 'unhide'},
+                {type: 'separator'},
+                {role: 'quit'}
             ]
         }, {
             label: 'Edit',
-            submenu: [ {
+            submenu: [{
                 label: 'Undo',
                 accelerator: 'CmdOrCtrl+Z',
                 selector: 'undo:'
             },
-            {
-                label: 'Redo',
-                accelerator: 'Shift+CmdOrCtrl+Z',
-                selector: 'redo:'
-            },
-            {
-                type: 'separator'
-            },
-            {
-                label: 'Cut',
-                accelerator: 'CmdOrCtrl+X',
-                selector: 'cut:'
-            },
-            {
-                label: 'Copy',
-                accelerator: 'CmdOrCtrl+C',
-                selector: 'copy:'
-            },
-            {
-                label: 'Paste',
-                accelerator: 'CmdOrCtrl+V',
-                selector: 'paste:'
-            },
-            {
-                label: 'Select All',
-                accelerator: 'CmdOrCtrl+A',
-                selector: 'selectAll:'
-            } ]
+                {
+                    label: 'Redo',
+                    accelerator: 'Shift+CmdOrCtrl+Z',
+                    selector: 'redo:'
+                },
+                {
+                    type: 'separator'
+                },
+                {
+                    label: 'Cut',
+                    accelerator: 'CmdOrCtrl+X',
+                    selector: 'cut:'
+                },
+                {
+                    label: 'Copy',
+                    accelerator: 'CmdOrCtrl+C',
+                    selector: 'copy:'
+                },
+                {
+                    label: 'Paste',
+                    accelerator: 'CmdOrCtrl+V',
+                    selector: 'paste:'
+                },
+                {
+                    label: 'Select All',
+                    accelerator: 'CmdOrCtrl+A',
+                    selector: 'selectAll:'
+                }]
         }, {
             label: '&Window',
             role: 'window',
             submenu: [
-                { role: 'minimize' },
-                { role: 'close' }
+                {role: 'minimize'},
+                {role: 'close'}
             ]
-        } ];
+        }];
 
         Menu.setApplicationMenu(Menu.buildFromTemplate(template));
     } else {
@@ -280,12 +280,8 @@ app.on('activate', () => {
 app.on('certificate-error',
     // eslint-disable-next-line max-params
     (event, webContents, url, error, certificate, callback) => {
-        if (isDev) {
-            event.preventDefault();
-            callback(true);
-        } else {
-            callback(false);
-        }
+        event.preventDefault();
+        callback(true);
     }
 );
 
@@ -326,7 +322,7 @@ if (isDev && process.platform === 'win32') {
     app.setAsDefaultProtocolClient(
         config.default.appProtocolPrefix,
         process.execPath,
-        [ path.resolve(process.argv[1]) ]
+        [path.resolve(process.argv[1])]
     );
 } else {
     app.setAsDefaultProtocolClient(config.default.appProtocolPrefix);
